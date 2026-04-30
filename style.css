@@ -622,7 +622,7 @@ p {
 
 .tier-row {
   display: grid;
-  grid-template-columns: minmax(220px, 0.85fr) minmax(0, 2.15fr);
+  grid-template-columns: minmax(190px, 0.7fr) minmax(0, 1.5fr) minmax(260px, 1fr);
   border-bottom: 1px solid rgba(222, 210, 189, 0.22);
 }
 
@@ -678,34 +678,8 @@ p {
   color: rgba(255, 255, 255, 0.78);
 }
 
-.tier-panels {
-  display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
-  gap: 18px;
-  margin-top: 22px;
-}
-
-.tier-panels article {
-  padding: 26px;
-  border: 1px solid rgba(222, 210, 189, 0.28);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.tier-panels h3 {
-  margin: 0 0 14px;
-  color: #fff;
-  font-size: 24px;
-}
-
-.tier-panels p {
-  margin: 0 0 14px;
-  font-weight: 800;
-}
-
-.tier-panels p:last-child {
-  margin-top: 16px;
-  margin-bottom: 0;
+.compact-list {
+  gap: 7px;
 }
 
 .growth {
@@ -843,10 +817,6 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .tier-panels {
-    grid-template-columns: 1fr;
-  }
-
   .tier-row {
     grid-template-columns: 1fr;
   }
@@ -874,6 +844,10 @@ p {
 
   .tier-row > div:nth-child(2)::before {
     content: "核心权益";
+  }
+
+  .tier-row > div:nth-child(3)::before {
+    content: "退出与消费机制";
   }
 }
 
