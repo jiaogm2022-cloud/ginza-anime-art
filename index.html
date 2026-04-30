@@ -13,7 +13,7 @@
         <span>Ginza Anime Art</span>
         <small>Tokyo Flagship Project</small>
       </a>
-      <nav class="nav" aria-label="Primary navigation">
+      <nav class="nav" id="mainNav" aria-label="Primary navigation">
         <a href="#proof">验证</a>
         <a href="#why-japan">日本</a>
         <a href="#asset">资产</a>
@@ -21,6 +21,9 @@
         <a href="#funding">融资</a>
         <a href="#tiers">权益</a>
       </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <a class="header-cta" href="https://wa.me/6589427926">WhatsApp</a>
     </header>
 
@@ -380,5 +383,21 @@
       <span>© 2026 Ginza Anime Art</span>
       <a href="#top">Back to top</a>
     </footer>
+    <script>
+      const toggle = document.getElementById('menuToggle');
+      const nav = document.getElementById('mainNav');
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        toggle.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', open);
+      });
+      nav.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          nav.classList.remove('open');
+          toggle.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    </script>
   </body>
 </html>
