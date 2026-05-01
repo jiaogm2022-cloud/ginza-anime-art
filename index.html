@@ -21,6 +21,10 @@
         <a href="#funding">融资</a>
         <a href="#tiers">权益</a>
       </nav>
+      <div class="language-switcher" aria-label="Language switcher">
+        <button type="button" data-lang="zh" class="is-active">中文</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -383,34 +387,6 @@
       <span>© 2026 Ginza Anime Art</span>
       <a href="#top">Back to top</a>
     </footer>
-    <script>
-      const toggle = document.getElementById('menuToggle');
-      const nav = document.getElementById('mainNav');
-      toggle.addEventListener('click', () => {
-        const open = nav.classList.toggle('open');
-        toggle.classList.toggle('open', open);
-        toggle.setAttribute('aria-expanded', open);
-      });
-      nav.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          nav.classList.remove('open');
-          toggle.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-      document.addEventListener('keydown', (event) => {
-        if (event.key !== 'Escape') return;
-        nav.classList.remove('open');
-        toggle.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-      window.addEventListener('resize', () => {
-        if (window.innerWidth > 760) {
-          nav.classList.remove('open');
-          toggle.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -10,6 +10,10 @@
   --charcoal: #12110f;
   --shadow: 0 24px 80px rgba(32, 22, 10, 0.18);
   --max-w: 1200px;
+  --page-gutter: clamp(24px, 5vw, 64px);
+  --content-side: max(var(--page-gutter), calc((100vw - var(--max-w)) / 2));
+  --section-y: clamp(72px, 8vw, 96px);
+  --section-gap: clamp(34px, 5vw, 64px);
 }
 
 * {
@@ -60,7 +64,7 @@ p {
   gap: 28px;
   align-items: center;
   min-height: 76px;
-  padding: 14px clamp(18px, 4vw, 60px);
+  padding: 14px var(--content-side);
   background: rgba(18, 17, 15, 0.9);
   border-bottom: 1px solid rgba(222, 210, 189, 0.32);
   backdrop-filter: blur(16px);
@@ -108,6 +112,35 @@ p {
 .nav a:hover,
 .footer a:hover {
   color: var(--gold);
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.language-switcher button {
+  min-width: 42px;
+  min-height: 32px;
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.66);
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.language-switcher button.is-active {
+  background: #fff;
+  color: var(--ink);
 }
 
 /* Hamburger toggle - hidden on desktop */
@@ -192,7 +225,7 @@ p {
 
 .hero-content {
   position: relative;
-  width: min(var(--max-w), calc(100% - 40px));
+  width: min(var(--max-w), calc(100% - (var(--page-gutter) * 2)));
   margin: 0 auto;
   padding: 9vh 0 11vh;
   color: #fff;
@@ -268,12 +301,14 @@ p {
 .proof-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  padding-right: var(--content-side);
+  padding-left: var(--content-side);
   background: #15130f;
   border-bottom: 1px solid rgba(222, 210, 189, 0.28);
 }
 
 .proof-strip article {
-  padding: 34px clamp(18px, 4vw, 42px);
+  padding: 34px clamp(18px, 3vw, 34px);
   border-right: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -299,10 +334,11 @@ p {
 /* ── Sections - global ── */
 /* 优化4: 不同 section 使用不同间距，形成阅读节奏 */
 .section {
-  max-width: var(--max-w);
+  width: min(var(--max-w), calc(100% - (var(--page-gutter) * 2)));
+  max-width: none;
   margin-left: auto;
   margin-right: auto;
-  padding: 80px clamp(18px, 5vw, 48px);
+  padding: var(--section-y) 0;
 }
 
 /* 需要全宽背景的 section 恢复 */
@@ -332,8 +368,21 @@ p {
 .model,
 .tiers,
 .value-add {
-  padding-left: clamp(18px, 5vw, 48px);
-  padding-right: clamp(18px, 5vw, 48px);
+  width: 100%;
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+}
+
+.dark > .section-heading,
+.dark > .asset-grid,
+.model > .section-heading,
+.model > .model-grid,
+.tiers > .section-heading,
+.tiers > .tier-table,
+.value-add > .section-heading,
+.value-add > .value-grid {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 优化4: 节奏变化 */
@@ -416,8 +465,8 @@ p {
 
 .conclusion {
   display: grid;
-  grid-template-columns: 0.85fr 1fr;
-  gap: 42px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: var(--section-gap);
   align-items: center;
 }
 
@@ -433,7 +482,7 @@ p {
 /* 优化2: 用 aspect-ratio 替代固定高度 */
 .media-band {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr 0.9fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -513,8 +562,8 @@ p {
 /* ── Two-col ── */
 .two-col {
   display: grid;
-  grid-template-columns: 0.78fr 1.22fr;
-  gap: 48px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: var(--section-gap);
   align-items: start;
 }
 
@@ -617,12 +666,14 @@ p {
 /* ── Split Proof ── */
 .split-proof {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 46px;
+  grid-template-columns: minmax(0, 520px) minmax(0, 600px);
+  gap: var(--section-gap);
+  justify-content: center;
   align-items: center;
   background: #fffaf0;
-  padding-left: clamp(18px, 5vw, 48px);
-  padding-right: clamp(18px, 5vw, 48px);
+  width: 100%;
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
 }
 
 .image-stack {
@@ -723,8 +774,8 @@ p {
 .funding,
 .growth {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 42px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: var(--section-gap);
   align-items: center;
 }
 
@@ -846,8 +897,11 @@ p {
     linear-gradient(90deg, rgba(0, 0, 0, 0.1), transparent),
     var(--charcoal);
   color: #fff;
-  padding-left: clamp(18px, 5vw, 48px);
-  padding-right: clamp(18px, 5vw, 48px);
+  grid-template-columns: minmax(0, 520px) minmax(0, 600px);
+  justify-content: center;
+  width: 100%;
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
 }
 
 /* 优化2: aspect-ratio */
@@ -926,7 +980,8 @@ p {
   align-items: center;
   text-align: center;
   gap: 32px;
-  max-width: var(--max-w);
+  width: min(var(--max-w), calc(100% - (var(--page-gutter) * 2)));
+  max-width: none;
   margin: 0 auto 64px;
   padding: clamp(36px, 6vw, 64px) clamp(24px, 5vw, 52px);
   background: linear-gradient(135deg, var(--charcoal) 0%, #1a1812 100%);
@@ -979,7 +1034,7 @@ p {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  padding: 24px clamp(18px, 5vw, 48px);
+  padding: 24px var(--content-side);
   background: #050505;
   color: rgba(255, 255, 255, 0.74);
   font-weight: 400;
@@ -1041,6 +1096,18 @@ p {
   .tier-row > div:nth-child(3)::before {
     content: "退出与消费机制";
   }
+
+  html[lang="en"] .tier-row > div:nth-child(1)::before {
+    content: "Tier";
+  }
+
+  html[lang="en"] .tier-row > div:nth-child(2)::before {
+    content: "Core benefits";
+  }
+
+  html[lang="en"] .tier-row > div:nth-child(3)::before {
+    content: "Exit / use";
+  }
 }
 
 /* ══════════════════════════════
@@ -1053,6 +1120,16 @@ p {
     gap: 10px;
     min-height: auto;
     padding: 12px 16px;
+  }
+
+  .language-switcher {
+    justify-self: end;
+  }
+
+  .language-switcher button {
+    min-width: 38px;
+    min-height: 30px;
+    padding: 4px 8px;
   }
 
   /* 优化5: 汉堡菜单 */
