@@ -160,7 +160,7 @@ const textMap = {
   "现在进入的是第一批位置。": "This is the first-round entry position.",
   "Ginza Anime Art Tokyo Flagship Project": "Ginza Anime Art Tokyo Flagship Project",
   "WeChat: artipsg": "WeChat: artipsg",
-  "Back to top": "Back to top",
+  "返回顶部": "Back to top",
 };
 
 const reverseTextMap = Object.fromEntries(Object.entries(textMap).map(([zh, en]) => [en, zh]));
