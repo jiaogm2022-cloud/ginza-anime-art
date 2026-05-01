@@ -515,6 +515,7 @@ p {
 }
 
 .art-wall .feature-art {
+  grid-column: span 2;
   grid-row: span 2;
 }
 
@@ -522,6 +523,10 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.art-wall .feature-art img {
+  object-fit: contain;
 }
 
 .art-wall figure::after {
@@ -1053,7 +1058,9 @@ p {
   }
 
   .art-wall .feature-art {
+    grid-column: 1 / -1;
     grid-row: span 1;
+    aspect-ratio: 2200 / 1816;
   }
 
   .conclusion,
@@ -1299,7 +1306,7 @@ p {
   }
 
   .art-wall .feature-art {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 2200 / 1816;
   }
 
   .growth img {
