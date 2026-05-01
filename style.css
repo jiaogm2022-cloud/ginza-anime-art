@@ -653,6 +653,11 @@ p {
   object-fit: contain;
 }
 
+.asset-grid .asset-card-tall img {
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+}
+
 .asset-grid article span,
 .asset-grid article h3,
 .asset-grid article p {
