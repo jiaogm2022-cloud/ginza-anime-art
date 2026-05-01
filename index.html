@@ -398,6 +398,19 @@
           toggle.setAttribute('aria-expanded', 'false');
         });
       });
+      document.addEventListener('keydown', (event) => {
+        if (event.key !== 'Escape') return;
+        nav.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 760) {
+          nav.classList.remove('open');
+          toggle.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     </script>
   </body>
 </html>
