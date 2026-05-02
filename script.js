@@ -285,5 +285,10 @@ document.querySelectorAll("[data-lang]").forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.lang));
 });
 
+document.querySelector(".language-switcher")?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-lang]");
+  if (button) setLanguage(button.dataset.lang);
+});
+
 initMenu();
 setLanguage(getInitialLanguage());
