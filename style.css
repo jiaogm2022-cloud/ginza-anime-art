@@ -654,7 +654,7 @@ p {
 }
 
 .asset-grid .asset-card-tall img {
-  aspect-ratio: 847 / 1094;
+  aspect-ratio: 4 / 3;
   object-fit: contain;
 }
 
