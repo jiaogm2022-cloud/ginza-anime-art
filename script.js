@@ -101,7 +101,6 @@ const textMap = {
   "目标": "Target",
   "$160,000–$280,000": "$160,000-$280,000",
   "单店月毛利，以分层成交与高价成交弹性构成。银座店承担“信任与定价中心”，线上与海外节点承担“交易规模放大”。": "Monthly gross profit per store, composed of tiered transactions and high-value deal upside. Ginza serves as the trust and pricing center, while online and overseas nodes scale transaction volume.",
-  "Funding": "Funding",
   "融资 $1,000,000，出让 20% 股权：用于银座旗舰店落地与12个月运营验证。": "Raising $1,000,000 for 20% equity to launch the Ginza flagship and validate 12 months of operations.",
   "核心目标：在银座完成“稳定盈利 + 可复制模型”验证，并启动京都/大阪复制的筹备条件。": "Core goal: validate stable profitability and a replicable model in Ginza, then prepare for Kyoto and Osaka replication.",
   "资金用途": "Use of Funds",
