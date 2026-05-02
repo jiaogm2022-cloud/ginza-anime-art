@@ -127,7 +127,7 @@ const textMap = {
   "参与扩张阶段的股权流转机会与限量发行机会": "Participate in expansion-stage equity transfer opportunities and limited releases.",
   "作为扩张期的核心支持者，进入项目资源协同圈层": "Enter the project resource collaboration circle as a core supporter during expansion.",
   "核心用户与收藏者": "Core user and collector",
-  "5000美金": "US$5,000",
+  "10000美金": "US$10,000",
   "进入收藏与交流圈层，优先获取内部发售信息": "Enter the collector community with priority access to internal sale information",
   "参与展览/签售/内部活动，鼓励内容分享与客户引荐": "Participate in exhibitions, signing events, and internal activities, with encouraged content sharing and customer referrals.",
   "与交易网络共同成长：收益来自成交规模、定价能力与网络效应提升": "Grow with the trading network: returns come from transaction scale, pricing power, and network effects.",
