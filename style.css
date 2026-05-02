@@ -796,6 +796,12 @@ p {
   padding: 12px;
 }
 
+.use-of-funds h3 {
+  margin: 0 14px 6px;
+  color: var(--ink);
+  font-size: 18px;
+}
+
 .use-of-funds div {
   display: flex;
   justify-content: space-between;
