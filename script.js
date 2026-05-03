@@ -93,7 +93,7 @@ const textMap = {
   "20 件 × $2,000": "20 works × $2,000",
   "单店稳定毛利核心（主力成交带）": "The core stable gross profit band for a single store.",
   "爆发款（高价）": "Breakout Products (High Price)",
-  "5 件 × $10,000+": "5 works × $10,000+",
+  "5 件 × 10000USD": "5 works × 10000USD",
   "提升月度毛利弹性（高价成交场景）": "Improves monthly gross profit upside through high-value transaction scenarios.",
   "线上与海外分发": "Online and Overseas Distribution",
   "$50,000 / 月": "$50,000 / month",
