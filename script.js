@@ -150,7 +150,7 @@ const textMap = {
   "流量与网络放大": "Traffic and Network Scale",
   "内容矩阵与社群运营、行业标杆化与潜在并购价值": "Content matrix and community operations, industry benchmark positioning, and potential acquisition value",
   "First Round Position": "First Round Position",
-  "现在进入的是第一批位置：银座旗舰店是交易网络的起点。": "This is the first-round position: the Ginza flagship is the starting point of the trading network.",
+  "现在进入的是第一批位置：银座旗舰店是交易网络的起点": "This is the first-round position: the Ginza flagship is the starting point of the trading network.",
   "我们用银座建立“信任、定价与成交”，用线上与全球节点放大“规模与周转”。如果你认同这是一个可复制、可规模化的交易模型，我们欢迎你加入第一轮。": "We use Ginza to establish trust, pricing, and transactions, then use online and global nodes to amplify scale and turnover. If you believe this is a replicable and scalable trading model, we welcome you to join the first round.",
   "WeChat: artipsg": "WeChat: artipsg",
   "返回顶部": "Back to top",
